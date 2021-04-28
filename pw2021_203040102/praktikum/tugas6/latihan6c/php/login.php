@@ -7,18 +7,18 @@ if (isset($_SESSION['username'])) {
     exit;
 }
 
-if (isset($_COOKIE['username']) && isset($_COOKIE['hash'])) {
+if(isset($_COOKIE['username']) && isset($_COOKIE['hash'])) {
     $username = $_COOKIE['username'];
     $hash = $_COOKIE['hash'];
 
     $result = mysqli_query(koneksi(), "SELECT * FROM user WHERE username = '$username'");
-    $row = mysqli_fetch_assoc($result);
+    $row =mysqli_fetch_assoc($result);
 
     if ($hash === hash('sha256', $row['id'], false)) {
-        $_SESSION['username'] = $_POST['username'];
+        $_SESSION['username'] = $row['username'];
         header("Location: admin.php");
         exit;
-    } 
+    }
 }
 
 if (isset($_POST['submit'])) {
@@ -55,7 +55,7 @@ if (isset($_POST['submit'])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login.php</title>
+    <title>Login</title>
     <link rel="stylesheet" href="../CSS/style6.css">
 </head>
 <body>

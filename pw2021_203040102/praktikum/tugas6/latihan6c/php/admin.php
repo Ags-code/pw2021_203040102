@@ -3,9 +3,9 @@
 // Nama : Agung Septiana
 // Npm  : 203040102
 // Shift : Kamis 08:00 - 09:00
-
-require 'functions.php';
 session_start();
+require 'functions.php';
+
 
 if (!isset($_SESSION['username'])) {
     header("Location: login.php");
