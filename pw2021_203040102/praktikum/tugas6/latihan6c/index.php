@@ -68,6 +68,8 @@ if (isset($_GET['cari'])) {
                 <li><a href="#"><img src="assets/img/facebook.png" alt="" width="40px"></a></li>
                 <li><a href="#"><img src="assets/img/instagram.png" alt="" width="40px"></a></li>
                 <li><a href="#"><img src="assets/img/twitter.png" alt="" width="40px"></a></li>
+                <li><a href="#"><img src="assets/img/008-youtube.png" alt="" width="40px"></a></li>
+                <li><a href="#"><img src="assets/img/github.png" alt="" width="40px"></a></li>
             </ul>
             <p class="copyrightText">Copyright © 2021 Agung Septiana. All Right Reserved.</p>
         </div>

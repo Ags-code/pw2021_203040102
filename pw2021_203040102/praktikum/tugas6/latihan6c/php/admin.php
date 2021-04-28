@@ -68,41 +68,44 @@ if (isset($_GET['cari'])) {
                                 <a href=""><h2>Contact</h2></a>
                             </div>
                         </div>
-                        <div class="pro">
-                            <h2>Join pro for work.</h2>
-                            <img src="../assets/img/suitcase.png" alt="" width="70px" />
-                        </div>
                     </div>
                 </section>
             </main>
-            <?php if(empty($gadget)) : ?>
-            <h1>Data tidak ditemukan</h1>
-        <?php else : ?>
-            <?php foreach ($gadget as $gdt) : ?>
-            <div class="cards">
-                <div class="card">
-                    <div class="btn">
-                        <a href="ubah.php?id=<?= $gdt['id']; ?>"><button>Ubah</button></a>
-                        <a href="hapus.php?id=<?= $gdt['id']; ?>" onclick="return confirm('Yakin mau dihapus?')"><button>Hapus</button></a>
+            <div class="content">
+                <?php if(empty($gadget)) : ?>
+                    <h1>Data tidak ditemukan</h1>
+                <?php else : ?>
+                <?php foreach ($gadget as $gdt) : ?>
+                <div class="cards">
+                    <div class="card">
+                        <div class="btn">
+                            <a href="ubah.php?id=<?= $gdt['id']; ?>"><button>Ubah</button></a>
+                            <a href="hapus.php?id=<?= $gdt['id']; ?>" onclick="return confirm('Yakin mau dihapus?')"><button>Hapus</button></a>
+                            <br>
+                        </div>
+                        <br>
+                        <img src="../assets/img/<?= $gdt['img']; ?>" alt="" width="100px">
+                        <br>
+                        <h2><?= $gdt['nama']?></h2>
+                        <br>
+                        <p><?= $gdt['harga']?></p>
+                        <br>
+                        <div class="kategori">
+                            <a href="beli.php"><?= $gdt['kategori']?></a>
+                            <a href="detail.php">Detail</a>
+                        </div>
                         <br>
                     </div>
-                    <br>
-                    <img src="../assets/img/<?= $gdt['img']; ?>" alt="" width="100px">
-                    <br>
-                    <h2><?= $gdt['nama']?></h2>
-                    <br>
-                    <p><?= $gdt['harga']?></p>
-                    <br>
-                    <div class="kategori"><a href="beli.php"><?= $gdt['kategori']?></a></div>
-                    <br>
                 </div>
+                <?php endforeach; ?>
+                <?php endif; ?>
             </div>
-            <?php endforeach; ?>
-        <?php endif; ?>
             <ul class="sci">
                 <li><a href="#"><img src="../assets/img/facebook.png" alt="" width="40px"></a></li>
                 <li><a href="#"><img src="../assets/img/instagram.png" alt="" width="40px"></a></li>
                 <li><a href="#"><img src="../assets/img/twitter.png" alt="" width="40px"></a></li>
+                <li><a href="#"><img src="../assets/img/008-youtube.png" alt="" width="40px"></a></li>
+                <li><a href="#"><img src="../assets/img/github.png" alt="" width="40px"></a></li>
             </ul>
             <p class="copyrightText">Copyright © 2021 Agung Septiana. All Right Reserved.</p>
         </div>
