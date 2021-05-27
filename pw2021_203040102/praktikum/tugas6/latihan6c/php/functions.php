@@ -1,7 +1,7 @@
 <?php
     function koneksi() {
         $conn = mysqli_connect("localhost", "root", "") or die ("koneksi ke DB gagal");
-        mysqli_select_db($conn, "pw_tubes_203040102")or die ("Database salah!");
+        mysqli_select_db($conn, "tubes_203040102")or die ("Database salah!");
 
         return $conn;
     }
@@ -83,5 +83,15 @@
         mysqli_query($conn, $query);
 
         return mysqli_affected_rows($conn);
+    }
+
+    function cari($keyword) {
+        $query = "SELECT * FROM gadget WHERE
+                img LIKE '%$keyword%' OR
+                nama LIKE '%$keyword%' OR
+                deskripsi LIKE '%$keyword%' OR
+                harga LIKE '%$keyword%' OR
+                kategori LIKE '%$keyword%' ";
+        return query($query);
     }
 ?>

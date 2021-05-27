@@ -26,14 +26,14 @@ if (isset($_GET['cari'])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tugas_203040102</title>
+    <title>Agung Store - Beli Gadget di Agung Store</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <section>
         <div class="container">
             <header>
-                <a href="#" class="logo">Agung Septiana</a>
+                <a href="#" class="logo">Agung Store</a>
                 <ul>
                     <li><a href="#" class="active">Home</a></li>
                     <li><a href="#">About</a></li>

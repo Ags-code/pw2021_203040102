@@ -7,6 +7,12 @@
     }
 
  require 'functions.php';
+ session_start();
+
+if (!isset($_SESSION['username'])) {
+    header("Location: login.php");
+    exit;
+}
  $id = $_GET['id'];
  $gadget = query("SELECT * FROM gadget WHERE id = $id") [0];
 ?>
@@ -41,7 +47,7 @@
                     <div class="inputBox">
                         <button type="submit" name="submit""><?= $gadget["kategori"];?></button>
                             <button type="submit">
-                                <a href="../index.php" style="text-decoration:none; color: #666;">Back</a>
+                                <a href="admin.php" style="text-decoration:none; color: #666;">Back</a>
                             </button>
                     </div>
                 </div>

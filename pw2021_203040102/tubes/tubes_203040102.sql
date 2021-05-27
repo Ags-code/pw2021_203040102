@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 28, 2021 at 07:35 AM
+-- Generation Time: May 25, 2021 at 02:49 PM
 -- Server version: 10.4.16-MariaDB
 -- PHP Version: 7.4.12
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `pw_tubes_203040102`
+-- Database: `tubes_203040102`
 --
 
 -- --------------------------------------------------------
@@ -65,7 +65,9 @@ CREATE TABLE `user` (
 
 INSERT INTO `user` (`id`, `username`, `password`) VALUES
 (2, 'agung', '$2y$10$fulQU2LVXwYjqyNv1W3SsOQ4HbzwB7/8StbkHhmiPBT.MgJ3NtYQO'),
-(4, 'ags', '$2y$10$2wSJRxbtSulYnchYLe/7geDU8CX2gWUaomzxGAPhA2rcYAvl4/91W');
+(4, 'ags', '$2y$10$2wSJRxbtSulYnchYLe/7geDU8CX2gWUaomzxGAPhA2rcYAvl4/91W'),
+(5, 'agung septiana', '$2y$10$OoKlN4zlclRrS/1S6GVL/.KZX674gqLKmng/YwbTSWkJ108tP25JS'),
+(6, 'admin', '$2y$10$rll5xE6TbQI4OZHE5QtiD.32jz9q6e1IX/XovK751ecEnTfVr/Sny');
 
 --
 -- Indexes for dumped tables
@@ -97,7 +99,7 @@ ALTER TABLE `gadget`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

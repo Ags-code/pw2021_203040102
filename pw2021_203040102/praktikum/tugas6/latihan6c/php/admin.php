@@ -5,7 +5,7 @@
 // Shift : Kamis 08:00 - 09:00
 session_start();
 require 'functions.php';
-
+ 
 
 if (!isset($_SESSION['username'])) {
     header("Location: login.php");
@@ -30,21 +30,21 @@ if (isset($_GET['cari'])) {
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Admin</title>
+    <title>Agung Strore - Beli Gadget di Agung Store</title>
     <link rel="stylesheet" href="../CSS/style2.css">
 </head>
 <body>
     <section>
         <div class="container">
             <header>
-                <a href="#" class="logo">Agung Septiana</a>
+                <a href="#" class="logo">Agung Store</a>
                 <ul>
                     <li><a href="logout.php" class="active"> Logout</a></li>
                     <li><a href="tambah.php" >Tambah Data</a></li>
                     <li><form action="" method="GET">
                             <div class="inputbox">
-                                <input type="text" name="keyword" autofocus>
-                                <button type="submit" name="cari">Cari</button>
+                                <input type="text" name="keyword" autofocus id="keyword">
+                                <button type="submit" name="cari" id="tombol-cari">Cari</button>
                             </div>
                         </form>
                     </li>
@@ -64,14 +64,18 @@ if (isset($_GET['cari'])) {
                                 <a href=""><h2>Dashboard</h2></a>
                             </div>
                             <div class="link">
+                                <img src="../assets/img/information-button.png" alt="" width="20px" />
+                                <a href="master.php"><h2>Admin</h2></a>
+                            </div>
+                            <div class="link">
                                 <img src="../assets/img/phone.png" alt="" width="20px" />
-                                <a href=""><h2>Contact</h2></a>
+                                <a href="contact.php"><h2>Contact</h2></a>
                             </div>
                         </div>
                     </div>
                 </section>
             </main>
-            <div class="content">
+            <div class="content" id="content">
                 <?php if(empty($gadget)) : ?>
                     <h1>Data tidak ditemukan</h1>
                 <?php else : ?>
@@ -110,5 +114,7 @@ if (isset($_GET['cari'])) {
             <p class="copyrightText">Copyright © 2021 Agung Septiana. All Right Reserved.</p>
         </div>
     </section>
+
+    <script src="../assets/js/script.js"></script>
 </body>
 </html>
